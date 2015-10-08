@@ -23,16 +23,15 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        locationManager.delegate = self
-//        locationManager.requestAlwaysAuthorization()
-//        if CLLocationManager.locationServicesEnabled(){
-//            locationManager.startUpdatingLocation()
-//        }
+        //        locationManager.delegate = self
+        //        locationManager.requestAlwaysAuthorization()
+        //        if CLLocationManager.locationServicesEnabled(){
+        //            locationManager.startUpdatingLocation()
+        //        }
         self.configurateMapView(currentLocationCoordinate)
-
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -41,21 +40,30 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     func configurateMapView(coordinate : CLLocationCoordinate2D){
         // initialize the map view
         mapView = MGLMapView(frame: view.bounds)
-        
+        //mapView = MGLMapView(frame: view.bounds, styleURL: NSURL(string: "asset://styles/light-v8.json"))//custom style
+        mapView.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
         // set the map's center coordinate
-        mapView.setCenterCoordinate(coordinate,
-            zoomLevel: 17, animated: true)
+        let bounds = MGLCoordinateBounds(sw: coordinate,
+            ne: coordinate)
+        mapView.setVisibleCoordinateBounds(bounds, animated: true)
+        //        mapView.setCenterCoordinate(coordinate,
+        //            zoomLevel: 17, animated: true)//alternative
         mapView.delegate = self
         view.addSubview(mapView)
         
         // Add annotation `point` to the map
+        self.addMarker()
+    }
+    
+    func addMarker(){
         let marker = MGLPointAnnotation()
-        marker.coordinate = coordinate
-        mapView.addAnnotation(marker)
+        marker.coordinate = currentLocationCoordinate
+        self.mapView.addAnnotation(marker)
+        print("added")
     }
     
     // MARK: - MGLMapView Delegate
-
+    
     func mapView(mapView: MGLMapView, didSelectAnnotation annotation: MGLAnnotation) {
         
         bubble = AnnotationView(frame: CGRectMake(0, 0, 233, 110))
@@ -76,6 +84,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         calloutView.dismissCalloutAnimated(true)
     }
     
+    
     func mapView(mapView: MGLMapView, imageForAnnotation annotation: MGLAnnotation) -> MGLAnnotationImage? {
         var annotationImage = mapView.dequeueReusableAnnotationImageWithIdentifier("point")
         
@@ -84,7 +93,7 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
             let image = UIImage(named: "point")
             annotationImage = MGLAnnotationImage(image: image!, reuseIdentifier: "point")
         }
-    
+        
         return annotationImage
     }
     
@@ -93,20 +102,18 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     }
     
     // MARK: - LocationManager Delegate
-
     
-//    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-//        if isCurrentLocation {
-//            isCurrentLocation = false
-//            self.configurateMapView(newLocation.coordinate)
-//        }
-//    }
-//    
-//    func mapViewDidFinishRenderingMap(mapView: MGLMapView, fullyRendered: Bool) {
-//        if fullyRendered{
-//            locationManager.startUpdatingLocation()
-//        }
-//    }
-
+    //    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+    //        if isCurrentLocation {
+    //            isCurrentLocation = false
+    //            self.configurateMapView(newLocation.coordinate)
+    //        }
+    //    }
+    //
+    //    func mapViewDidFinishRenderingMap(mapView: MGLMapView, fullyRendered: Bool) {
+    //        if fullyRendered{
+    //            locationManager.startUpdatingLocation()
+    //        }
+    //    }
+    
 }
-
