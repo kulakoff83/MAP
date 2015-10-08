@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		51FF52390996777CBD4332EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D238D766C82C20EAB33DDA8E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		711412731BC6F896008E550B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 711412721BC6F896008E550B /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		714734B51BC3E87F0067D449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734B41BC3E87F0067D449 /* AppDelegate.swift */; };
 		714734B71BC3E87F0067D449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734B61BC3E87F0067D449 /* ViewController.swift */; };
 		714734BA1BC3E87F0067D449 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714734B81BC3E87F0067D449 /* Main.storyboard */; };
@@ -15,12 +16,12 @@
 		714734BF1BC3E87F0067D449 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 714734BE1BC3E87F0067D449 /* Assets.xcassets */; };
 		714734C21BC3E87F0067D449 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 714734C01BC3E87F0067D449 /* LaunchScreen.storyboard */; };
 		714734CA1BC3E8AC0067D449 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734C91BC3E8AC0067D449 /* AnnotationView.swift */; settings = {ASSET_TAGS = (); }; };
-		71B55F1F1BC417D1000EE72A /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 71B55F1E1BC417D1000EE72A /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		71B55F211BC456A6000EE72A /* AnnotationViewXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B55F201BC456A6000EE72A /* AnnotationViewXib.xib */; settings = {ASSET_TAGS = (); }; };
 		71B55F261BC45BA7000EE72A /* SMCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B55F251BC45BA7000EE72A /* SMCalloutView.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		711412721BC6F896008E550B /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		714734B11BC3E87F0067D449 /* MAP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		714734B41BC3E87F0067D449 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		714734B61BC3E87F0067D449 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,7 +31,6 @@
 		714734C11BC3E87F0067D449 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		714734C31BC3E87F0067D449 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		714734C91BC3E8AC0067D449 /* AnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		71B55F1E1BC417D1000EE72A /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		71B55F201BC456A6000EE72A /* AnnotationViewXib.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnnotationViewXib.xib; sourceTree = "<group>"; };
 		71B55F231BC45BA6000EE72A /* MAP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAP-Bridging-Header.h"; sourceTree = "<group>"; };
 		71B55F241BC45BA7000EE72A /* SMCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalloutView.h; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 				714734C01BC3E87F0067D449 /* LaunchScreen.storyboard */,
 				714734C31BC3E87F0067D449 /* Info.plist */,
 				714734BB1BC3E87F0067D449 /* MAP.xcdatamodeld */,
-				71B55F1E1BC417D1000EE72A /* Settings.bundle */,
+				711412721BC6F896008E550B /* Settings.bundle */,
 			);
 			path = MAP;
 			sourceTree = "<group>";
@@ -150,6 +150,7 @@
 				TargetAttributes = {
 					714734B01BC3E87F0067D449 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = XXEFFWR72V;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -181,9 +182,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71B55F1F1BC417D1000EE72A /* Settings.bundle in Resources */,
 				714734C21BC3E87F0067D449 /* LaunchScreen.storyboard in Resources */,
 				714734BF1BC3E87F0067D449 /* Assets.xcassets in Resources */,
+				711412731BC6F896008E550B /* Settings.bundle in Resources */,
 				714734BA1BC3E87F0067D449 /* Main.storyboard in Resources */,
 				71B55F211BC456A6000EE72A /* AnnotationViewXib.xib in Resources */,
 			);
@@ -294,6 +295,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -338,6 +340,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_BITCODE = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
