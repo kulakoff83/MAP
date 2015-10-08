@@ -17,15 +17,19 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
     let locationManager = CLLocationManager()
     var bubble : AnnotationView?
     var calloutView = SMCalloutView()
+    let currentLocationCoordinate = CLLocationCoordinate2D(latitude: 55.755786,
+        longitude: 37.617633)
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        locationManager.delegate = self
-        locationManager.requestAlwaysAuthorization()
-        if CLLocationManager.locationServicesEnabled(){
-            locationManager.startUpdatingLocation()
-        }
+//        locationManager.delegate = self
+//        locationManager.requestAlwaysAuthorization()
+//        if CLLocationManager.locationServicesEnabled(){
+//            locationManager.startUpdatingLocation()
+//        }
+        self.configurateMapView(currentLocationCoordinate)
+
         // Do any additional setup after loading the view, typically from a nib.
     }
 
@@ -40,35 +44,21 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         
         // set the map's center coordinate
         mapView.setCenterCoordinate(coordinate,
-            zoomLevel: 18, animated: true)
-        view.addSubview(mapView)
+            zoomLevel: 17, animated: true)
         mapView.delegate = self
+        view.addSubview(mapView)
         
-//        let camera = MGLMapCamera(lookingAtCenterCoordinate: coordinate, fromDistance: 500, pitch: 45, heading: 0)
-//        mapView.setCamera(camera, withDuration: 5, animationTimingFunction: CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut))
-        
+        // Add annotation `point` to the map
         let marker = MGLPointAnnotation()
         marker.coordinate = coordinate
-//        marker.title = "title"
-//        marker.subtitle = "subtitle"
-    // Add annotation `point` to the map
         mapView.addAnnotation(marker)
-        
-        
-    }
-    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
-        if isCurrentLocation {
-            isCurrentLocation = false
-            self.configurateMapView(newLocation.coordinate)
-        }
     }
     
-    
+    // MARK: - MGLMapView Delegate
+
     func mapView(mapView: MGLMapView, didSelectAnnotation annotation: MGLAnnotation) {
         
         bubble = AnnotationView(frame: CGRectMake(0, 0, 233, 110))
-        //self.calloutView.title = annotation.title
-        //self.calloutView.subtitle = annotation.subtitle
         self.calloutView.contentView = bubble!
         self.calloutView.contentViewInset = UIEdgeInsetsMake(0,0, -17, 0)
         
@@ -98,14 +88,24 @@ class ViewController: UIViewController, MGLMapViewDelegate, CLLocationManagerDel
         return annotationImage
     }
     
-    func mapViewDidFinishRenderingMap(mapView: MGLMapView, fullyRendered: Bool) {
-        if fullyRendered{
-            locationManager.startUpdatingLocation()
-        }
+    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
+        return true
     }
     
-//    func mapView(mapView: MGLMapView, annotationCanShowCallout annotation: MGLAnnotation) -> Bool {
-//        return true
+    // MARK: - LocationManager Delegate
+
+    
+//    func locationManager(manager: CLLocationManager, didUpdateToLocation newLocation: CLLocation, fromLocation oldLocation: CLLocation) {
+//        if isCurrentLocation {
+//            isCurrentLocation = false
+//            self.configurateMapView(newLocation.coordinate)
+//        }
+//    }
+//    
+//    func mapViewDidFinishRenderingMap(mapView: MGLMapView, fullyRendered: Bool) {
+//        if fullyRendered{
+//            locationManager.startUpdatingLocation()
+//        }
 //    }
 
 }

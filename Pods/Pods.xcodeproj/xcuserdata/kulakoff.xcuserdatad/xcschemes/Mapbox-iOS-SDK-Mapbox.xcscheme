@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D324C83AA9F3786274AF29FA"
+               BlueprintIdentifier = "6A31B2B070807408C654EF60"
                BuildableName = "Mapbox.bundle"
                BlueprintName = "Mapbox-iOS-SDK-Mapbox"
                ReferencedContainer = "container:Pods.xcodeproj">
