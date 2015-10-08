@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnnotationView" customModule="MAP" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AnnotationView" customModule="MAP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="250" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ATC-bu-EYO">
+                    <rect key="frame" x="0.0" y="0.0" width="250" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Какой-то тайтл здесь будет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4DB-HV-ZoI">
+                            <rect key="frame" x="8" y="8" width="234" height="21"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="Fqc-zx-ZPu"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что-то еще здесь будет" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOP-Hy-Rfe">
+                            <rect key="frame" x="8" y="31" width="234" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="4DB-HV-ZoI" secondAttribute="trailing" constant="8" id="9tI-k8-TBO"/>
+                        <constraint firstItem="4DB-HV-ZoI" firstAttribute="leading" secondItem="ATC-bu-EYO" secondAttribute="leading" constant="8" id="Brg-LO-3tP"/>
+                        <constraint firstItem="xOP-Hy-Rfe" firstAttribute="leading" secondItem="ATC-bu-EYO" secondAttribute="leading" constant="8" id="RVY-JU-FsL"/>
+                        <constraint firstAttribute="width" secondItem="ATC-bu-EYO" secondAttribute="height" multiplier="25:6" id="Wp5-zN-4AN"/>
+                        <constraint firstItem="xOP-Hy-Rfe" firstAttribute="top" secondItem="4DB-HV-ZoI" secondAttribute="bottom" constant="2" id="bOy-AM-vMf"/>
+                        <constraint firstAttribute="bottom" secondItem="xOP-Hy-Rfe" secondAttribute="bottom" constant="8" id="bxI-t4-zF6"/>
+                        <constraint firstItem="4DB-HV-ZoI" firstAttribute="top" secondItem="ATC-bu-EYO" secondAttribute="top" constant="8" id="kXt-Ac-y8Y"/>
+                        <constraint firstAttribute="trailing" secondItem="xOP-Hy-Rfe" secondAttribute="trailing" constant="8" id="pnN-fC-SYa"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1M7-bD-j2M">
+                    <rect key="frame" x="0.0" y="60" width="250" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET ENVOLVED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vhm-Sw-GV1">
+                            <rect key="frame" x="8" y="8.5" width="234" height="25"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" red="0.99607843139999996" green="0.45098039220000002" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <gestureRecognizers/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vhm-Sw-GV1" secondAttribute="trailing" constant="8" id="BCF-h1-RHY"/>
+                        <constraint firstItem="vhm-Sw-GV1" firstAttribute="top" secondItem="1M7-bD-j2M" secondAttribute="top" constant="8.5" id="dmS-nq-JCX"/>
+                        <constraint firstItem="vhm-Sw-GV1" firstAttribute="leading" secondItem="1M7-bD-j2M" secondAttribute="leading" constant="8" id="eqv-uV-pU4"/>
+                        <constraint firstAttribute="bottom" secondItem="vhm-Sw-GV1" secondAttribute="bottom" constant="26.5" id="zSN-Uc-Xbh"/>
+                    </constraints>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="g8E-TK-bFT" appends="YES" id="IDW-AW-hC2"/>
+                    </connections>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="ATC-bu-EYO" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="BIk-2A-1xD"/>
+                <constraint firstItem="ATC-bu-EYO" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="C8M-Vk-SET"/>
+                <constraint firstAttribute="trailing" secondItem="1M7-bD-j2M" secondAttribute="trailing" id="Kxz-73-hqE"/>
+                <constraint firstAttribute="trailing" secondItem="ATC-bu-EYO" secondAttribute="trailing" id="cJk-bb-YJi"/>
+                <constraint firstItem="1M7-bD-j2M" firstAttribute="top" secondItem="ATC-bu-EYO" secondAttribute="bottom" id="g5w-FK-X1u"/>
+                <constraint firstItem="1M7-bD-j2M" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="pd1-Lr-uIZ"/>
+                <constraint firstAttribute="bottom" secondItem="1M7-bD-j2M" secondAttribute="bottom" id="tft-RI-D4r"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="background" destination="ATC-bu-EYO" id="AgE-t9-35U"/>
+                <outlet property="orangeView" destination="1M7-bD-j2M" id="4z6-aU-bsm"/>
+            </connections>
+            <point key="canvasLocation" x="302" y="322"/>
+        </view>
+        <tapGestureRecognizer id="g8E-TK-bFT">
+            <connections>
+                <action selector="getEnvolvedTapped:" destination="-1" id="jBF-Ho-Shz"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
