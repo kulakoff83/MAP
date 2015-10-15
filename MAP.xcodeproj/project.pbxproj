@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51FF52390996777CBD4332EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D238D766C82C20EAB33DDA8E /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		51FF52390996777CBD4332EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D238D766C82C20EAB33DDA8E /* Pods.framework */; };
 		711412731BC6F896008E550B /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 711412721BC6F896008E550B /* Settings.bundle */; settings = {ASSET_TAGS = (); }; };
 		714734B51BC3E87F0067D449 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734B41BC3E87F0067D449 /* AppDelegate.swift */; };
 		714734B71BC3E87F0067D449 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734B61BC3E87F0067D449 /* ViewController.swift */; };
@@ -18,6 +18,9 @@
 		714734CA1BC3E8AC0067D449 /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714734C91BC3E8AC0067D449 /* AnnotationView.swift */; settings = {ASSET_TAGS = (); }; };
 		71B55F211BC456A6000EE72A /* AnnotationViewXib.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71B55F201BC456A6000EE72A /* AnnotationViewXib.xib */; settings = {ASSET_TAGS = (); }; };
 		71B55F261BC45BA7000EE72A /* SMCalloutView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B55F251BC45BA7000EE72A /* SMCalloutView.m */; settings = {ASSET_TAGS = (); }; };
+		71FA426F1BD02176001CF571 /* Company+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA426D1BD02176001CF571 /* Company+CoreDataProperties.swift */; settings = {ASSET_TAGS = (); }; };
+		71FA42701BD02176001CF571 /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA426E1BD02176001CF571 /* Company.swift */; settings = {ASSET_TAGS = (); }; };
+		71FA42721BD023F0001CF571 /* CoreDataCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA42711BD023F0001CF571 /* CoreDataCoordinator.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		71B55F231BC45BA6000EE72A /* MAP-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MAP-Bridging-Header.h"; sourceTree = "<group>"; };
 		71B55F241BC45BA7000EE72A /* SMCalloutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCalloutView.h; sourceTree = "<group>"; };
 		71B55F251BC45BA7000EE72A /* SMCalloutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCalloutView.m; sourceTree = "<group>"; };
+		71FA426D1BD02176001CF571 /* Company+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Company+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		71FA426E1BD02176001CF571 /* Company.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
+		71FA42711BD023F0001CF571 /* CoreDataCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataCoordinator.swift; sourceTree = "<group>"; };
 		B9DA8D2E85D5AC2406ECE458 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		D238D766C82C20EAB33DDA8E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F541D8D9942B5C6D4182FA16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				714734B41BC3E87F0067D449 /* AppDelegate.swift */,
+				71FA426C1BD02154001CF571 /* Model */,
 				71B55F221BC45B88000EE72A /* Helper */,
 				714734B61BC3E87F0067D449 /* ViewController.swift */,
 				714734C91BC3E8AC0067D449 /* AnnotationView.swift */,
@@ -113,6 +120,16 @@
 				71B55F231BC45BA6000EE72A /* MAP-Bridging-Header.h */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		71FA426C1BD02154001CF571 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71FA426D1BD02176001CF571 /* Company+CoreDataProperties.swift */,
+				71FA426E1BD02176001CF571 /* Company.swift */,
+				71FA42711BD023F0001CF571 /* CoreDataCoordinator.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -247,7 +264,10 @@
 			files = (
 				71B55F261BC45BA7000EE72A /* SMCalloutView.m in Sources */,
 				714734B71BC3E87F0067D449 /* ViewController.swift in Sources */,
+				71FA426F1BD02176001CF571 /* Company+CoreDataProperties.swift in Sources */,
+				71FA42721BD023F0001CF571 /* CoreDataCoordinator.swift in Sources */,
 				714734CA1BC3E8AC0067D449 /* AnnotationView.swift in Sources */,
+				71FA42701BD02176001CF571 /* Company.swift in Sources */,
 				714734BD1BC3E87F0067D449 /* MAP.xcdatamodeld in Sources */,
 				714734B51BC3E87F0067D449 /* AppDelegate.swift in Sources */,
 			);

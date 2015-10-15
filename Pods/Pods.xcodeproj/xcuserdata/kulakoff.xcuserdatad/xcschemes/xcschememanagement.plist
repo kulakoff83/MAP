@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>MagicalRecord.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Mapbox-iOS-SDK-Mapbox.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>333CB5A4AFC285E7C0E64541CD7D62FE</key>
+		<key>4A31CEA90D258DAA1C52CF9B1139C66D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B31B3A0DA5AA56672C715F0F168F0D79</key>
+		<key>D58D76EC529B4A92F3E5EDADE0A96661</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F96075D10B767F1118A080787F33F62F</key>
+		<key>E0ECC3BD18CAEBE408E9023D3847041A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC577BB28415FB8C33E8BF5CC5C2BA82</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -1,5 +1,6 @@
 platform :ios, '8.0'
 pod 'Mapbox-iOS-SDK'
+pod "MagicalRecord"
 use_frameworks!
 
 # disable bitcode in every sub-target

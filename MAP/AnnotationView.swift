@@ -13,6 +13,8 @@ import UIKit
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var orangeView: UIView!
     
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
     
     var view: UIView!
     let nibName = "AnnotationViewXib"

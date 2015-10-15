@@ -1,10 +1,13 @@
 PODS:
+  - MagicalRecord (2.3.0)
   - Mapbox-iOS-SDK (2.1.2)
 
 DEPENDENCIES:
+  - MagicalRecord
   - Mapbox-iOS-SDK
 
 SPEC CHECKSUMS:
+  MagicalRecord: 89eb7d7ead39fb37f01c3d010665ee94d17f8dba
   Mapbox-iOS-SDK: f8a8fd3ccf918196d27a52ab1694414be20f2210
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0
